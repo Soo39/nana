@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>종이마음 · 디지털로 접는 손편지</title>
+  <meta name="description" content="온라인에서 편지를 쓰고, 종이접기처럼 접어, 마음을 담아 전하는 감성 편지 서비스." />
+
+  <!-- 둥근 고딕 감성을 위한 웹폰트 (단일 stylesheet · 미로딩 시 시스템 폰트로 폴백) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jua&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#/home" data-link>
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 7l9-4 9 4-9 4-9-4z" />
+          <path d="M3 7v8l9 4 9-4V7" />
+          <path d="M12 11v8" />
+        </svg>
+      </span>
+      <span class="brand-name">종이마음</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#/write" data-link>편지 쓰기</a>
+      <a href="#/inbox" data-link class="nav-inbox">
+        편지함<span class="inbox-badge" id="inboxBadge" hidden>0</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- 화면이 렌더링되는 곳 -->
+  <main id="app" class="app"></main>
+
+  <footer class="site-footer">
+    <p>한 통의 편지를, 한 번의 정성으로 접다 · <span class="footer-dim">종이마음</span></p>
+  </footer>
+
+  <!-- 짧은 안내 토스트 -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
